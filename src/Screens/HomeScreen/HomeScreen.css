@@ -1,0 +1,60 @@
+
+
+:root {
+    --font-family-primary: 'helvetica neue', helvetica, arial, sans-serif;
+
+    --font-color-primary: #000000;
+    --font-color-secondary: #757575;
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #f6f5f4;
+
+    --detail-color-primary: #1daa61;
+    --detail-color-secondary: #007bfc;
+    --detail-color-tertiary: #d9fdd3;
+
+    --background-color-dark-mode-primary: #161717;
+    --background-color-dark-mode-secondary: #2e2f2f;
+    --font-color-dark-mode-primary: #ffffff;
+    --font-color-dark-mode-secondary: #a2a295;
+}
+body {
+    margin: 0;
+    width: 100%;
+    color: var(--font-color-primary);
+    text-decoration: none;
+
+}
+/* .light-mode {
+    background-color: var(--background-color-primary);
+    color: var(--font-color-primary);
+    text-decoration: none;
+} */
+.home-screen-header {
+    display: flex;
+    background-color: var(--background-color-primary);
+    color: var(--detail-color-primary);
+    font-family: var(--font-family-primary);
+    justify-content: start;
+    align-items: center;
+    padding: 0px 20px;
+    font-size: 12px;
+}
+.home-screen-body {
+    display: flex;
+    font-family: var(--font-family-primary);
+    align-items: center;
+    margin: 20px;
+}
+.contact-side-bar {
+    width: 30%;
+    border-right: 1px solid var(--background-color-secondary);
+    height: 90vh;
+    border: 1px solid #000000;
+}
+.contact-detail-screen {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 90vh;
+    border: 1px solid #000000;
+}

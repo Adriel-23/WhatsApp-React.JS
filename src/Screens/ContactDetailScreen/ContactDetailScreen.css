@@ -1,0 +1,10 @@
+
+
+.empty-contact-detail {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-primary);
+    color: #c92020;
+    align-items: center;
+    justify-content: center;
+}

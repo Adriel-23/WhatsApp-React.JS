@@ -4,6 +4,7 @@ import { getContactById } from '../../Services/ContactService';
 import MessageContent from '../../Components/MessageContent/MessageContent';
 import { ContactDetailContext } from '../../Context/ContactDetailContext';
 import { ContactContext } from '../../Context/ContactContext';
+import './ContactDetailScreen.css';
 
 export default function ContactDetailScreen() {
 
@@ -37,8 +38,8 @@ export default function ContactDetailScreen() {
     
     if (!contactSelected) {
         return (
-            <div>
-                <h2>Contacto no encontrado</h2>
+            <div className= "empty-contact-detail">
+                <h2>Contacto no Seleccionado</h2>
             </div>
         );
     }
@@ -52,7 +53,7 @@ export default function ContactDetailScreen() {
     Renderizar la lista de mensajes en un componente llamado MessagesList (No hace falta estilos en esta etapa)
     */
     return (
-        <div>
+        <div className='contact-detail-screen-container'>
             <img src={contactSelected.contact_perfil_image} alt={contactSelected.contact_name} width={40}/>
             <h1>{contactSelected.contact_name}</h1>
             {contactSelected && (

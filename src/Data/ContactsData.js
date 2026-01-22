@@ -81,8 +81,52 @@ const contacts_data = [
                 send_by_me: true,
             }
         ]
+    },
+    {
+        contact_id: 3,
+        contact_name: 'Manuel',
+        contact_perfil_image: "/src/Assets/RoronoaZoro.webp",
+        last_message_created_at: new Date(),
+        last_message_content: 'Nuevo mensaje',
+        last_message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+        messages: [
+            {
+                message_id: 1,
+                message_content: 'Usopp actualizó el báculo de Nami',
+                message_created_at: new Date(),
+                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                send_by_me: false,
+            },
+            {
+                message_id: 2,
+                message_content: 'Puede Crear Comida ahora?',
+                message_created_at: new Date(),
+                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                send_by_me: true,
+            },
+            {
+                message_id: 3,
+                message_content: 'Ni en tus sueños, ya deja de decir idioteces',
+                message_created_at: new Date(),
+                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                send_by_me: false,
+            },
+            {
+                message_id: 4,
+                message_content: 'Muero de hambreeeeee',
+                message_created_at: new Date(),
+                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                send_by_me: true,
+            },
+            {
+                message_id: 5,
+                message_content: 'No exageres, pronto llegaremos a Alabasta',
+                message_created_at: new Date(),
+                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                send_by_me: false,
+            }
+        ]
     }
 ];
 
 export default contacts_data;
-
