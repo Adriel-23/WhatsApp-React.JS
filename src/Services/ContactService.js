@@ -16,8 +16,8 @@ function getLastMessageByContactId(contact_id) {
     const contact = getContactById(contact_id);
     if (!contact) return null;
     const messages = contact.messages;
-    if (!messages || messages.length === 0) return null;
-    return messages[messages.length - 1];
+        if (!messages || messages.length === 0) return null;
+        return messages[messages.length - 1];
 }
 
 export { getContactsList, getContactById, getLastMessageByContactId };

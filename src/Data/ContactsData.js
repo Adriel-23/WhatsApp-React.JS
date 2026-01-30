@@ -1,131 +1,146 @@
+import { act } from "react";
+
 const contacts_data = [
     {
         contact_id: 1,
-        contact_name: 'Sabrina',
-        contact_perfil_image: "https://images.unsplash.com/photo-1688888745596-da40843a8d45?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        contact_name: 'Nami',
+        contact_perfil_image: "https://i.pinimg.com/736x/8b/07/19/8b07190685bb7279193a04ed685ed7be.jpg",
         last_message_created_at: new Date(),
-        last_message_content: 'Nuevo mensaje',
-        last_message_status: 'NOT_RECEIVED', // 'SEEN', 'UNSEEN'
+        is_hidden: false,
+        has_active_chat: true,
+        last_message_status: 'NOT_RECEIVED', 
         messages: [
             {
                 message_id: 1,
                 message_content: 'Vamos a ver Zootopia 2 este sábado?',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T14:00:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 2,
                 message_content: 'Dale, te parece que vayamos tipo 19?',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T14:03:00'),
+                message_status: 'SEEN', 
                 send_by_me: true,
             },
             {
                 message_id: 3,
                 message_content: 'Si hay funcion a esa hora perfecto, de paso comemos algo a la salida',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T14:05:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 4,
                 message_content: 'Obvio que la comida la invitas vos',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T14:10:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 5,
                 message_content: 'Jajaja Bueno dale, ahora compro las entradas entonces',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T14:15:00'),
+                message_status: 'SEEN', 
                 send_by_me: true,
             }
         ]
     },
     {
         contact_id: 2,
-        contact_name: 'Guillermo',
-        contact_perfil_image: "https://preview.redd.it/yall-want-some-profile-pictures-v0-kg5dtjppx9ze1.jpg?width=640&crop=smart&auto=webp&s=26a56124c45355ad73af6ca2d214e0d95c39b6a6",
+        contact_name: 'Sanji',
+        contact_perfil_image: "https://i.pinimg.com/736x/52/f7/f6/52f7f62b1f765b561efdc5e6c3874e4f.jpg",
         last_message_created_at: new Date(),
-        last_message_content: 'Nuevo mensaje',
-        last_message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+        is_hidden: false,
+        has_active_chat: true,
+        last_message_status: 'SEEN', 
         messages: [
             {
                 message_id: 1,
                 message_content: 'Flaquito, sale CS2 yayayaya???',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-22T17:00:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 2,
                 message_content: 'Me preparo comida y entro, anda metiendote a DS',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-22T17:05:00'),
+                message_status: 'SEEN', 
                 send_by_me: true,
             },
             {
                 message_id: 3,
                 message_content: 'Dale te espero, invitemos al Pato tambien',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-22T17:10:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 4,
                 message_content: 'Dale, dame 10 minutos y estoy',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-22T17:15:00'),
+                message_status: 'SEEN', 
                 send_by_me: true,
             }
         ]
     },
     {
         contact_id: 3,
-        contact_name: 'Manuel',
-        contact_perfil_image: "/src/Assets/RoronoaZoro.webp",
+        contact_name: 'Zoro',
+        contact_perfil_image: "https://i.pinimg.com/736x/de/80/33/de8033cf94318fd9a7a1525cfbd4aaf1.jpg",
         last_message_created_at: new Date(),
-        last_message_content: 'Nuevo mensaje',
-        last_message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+        is_hidden: false,
+        has_active_chat: true,
+        last_message_status: 'SEEN', 
         messages: [
             {
                 message_id: 1,
                 message_content: 'Usopp actualizó el báculo de Nami',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T10:00:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 2,
                 message_content: 'Puede Crear Comida ahora?',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T10:05:00'),
+                message_status: 'SEEN', 
                 send_by_me: true,
             },
             {
                 message_id: 3,
                 message_content: 'Ni en tus sueños, ya deja de decir idioteces',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T10:10:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 4,
                 message_content: 'Muero de hambreeeeee',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T10:15:00'),
+                message_status: 'SEEN', 
                 send_by_me: true,
             },
             {
                 message_id: 5,
                 message_content: 'No exageres, pronto llegaremos a Alabasta',
-                message_created_at: new Date(),
-                message_status: 'SEEN', // 'SEEN', 'UNSEEN'
+                message_created_at: new Date('2026-01-23T10:20:00'),
+                message_status: 'SEEN', 
                 send_by_me: false,
             }
         ]
+    },
+    {
+        contact_id: 4,
+        contact_name: 'Sogeking',
+        contact_perfil_image: "https://i.pinimg.com/736x/9f/3d/51/9f3d51400e063e019482a514ebd4fcf9.jpg",
+        last_message_created_at: new Date(),
+        is_hidden: true,
+        has_active_chat: false,
+        last_message_status: 'SEEN', 
+        messages: []
     }
 ];
 

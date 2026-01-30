@@ -16,14 +16,14 @@ export default function ContactDetailScreen() {
     /* 
         Como podriamos obtener el contacto a partir del contact_id?
     */
-    useEffect(
+    /* useEffect(
         () => {
             if(!contactSelected) return;
             
             const timeout = setTimeout(
                 () => {
                     updateContactById(
-                        {...contactSelected, contact_name: 'Ratatuille'},
+                        {...contactSelected, },
                         contactSelected.contact_id
                     )
                 },
@@ -33,7 +33,7 @@ export default function ContactDetailScreen() {
             return () => clearTimeout(timeout)
         },
         [contact_id]
-    )
+    ) */
     
     if (!contactSelected) {
         return (

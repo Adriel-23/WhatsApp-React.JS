@@ -1,10 +1,89 @@
 
+:root {
+    --font-family-primary: 'helvetica neue', helvetica, arial, sans-serif;
 
+    --font-color-primary: #000000;
+    --font-color-secondary: #757575;
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #f6f5f4;
+
+    --detail-color-primary: #1daa61;
+    --detail-color-secondary: #007bfc;
+    --detail-color-tertiary: #d9fdd3;
+
+    --background-color-dark-mode-primary: #161717;
+    --background-color-dark-mode-secondary: #2e2f2f;
+    --font-color-dark-mode-primary: #ffffff;
+    --font-color-dark-mode-secondary: #a2a295;
+}
 .empty-contact-detail {
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color-primary);
-    color: #c92020;
+    background-color: var(--background-color-dark-mode-primary);
+    color: #ffffff;
     align-items: center;
     justify-content: center;
+}
+.contact-detail-screen {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.contact-open-chat-container {
+    display: flex;
+    font-family: var(--font-family-primary);
+    height: 100vh;
+    width: 100%;
+    /* border: 3px solid #000000; */
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--background-color-dark-mode-primary);
+    z-index: 1;
+}
+.contact-open-chat-container::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://camo.githubusercontent.com/c42c83df2fd1e442ef1e0ed69cc20d21f65308fc2f0dca2a8035360738d49c8c/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131306234303866303735642e706e67);
+    background-repeat: repeat;
+    background-size: 500px auto;
+    opacity: 0.10;
+    z-index: -1;
+}
+.profile-contact-detail-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+    background-color: var(--background-color-dark-mode-primary);
+}
+.contact-messages-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    scrollbar-color: var(--detail-color-primary) transparent;
+    padding: 10px;
+}
+.messages-list-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    overflow-y: auto;
+}
+.new-message-form-container {
+    padding: 10px;
+    background: none;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 769px) {
+    .contact-detail-screen-container {
+        display: none;
+    }
 }

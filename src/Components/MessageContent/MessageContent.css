@@ -1,0 +1,44 @@
+.message-list-container {
+    display: flex;
+    
+}
+.message-bubble {
+    max-width: 60%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.message-by-me {
+    background-color: #134d37;
+    align-self: flex-end;
+    border-radius: 7.5px;
+    max-width: 60%;
+    position: relative;
+}
+
+.message-by-contact {
+    background-color: #232626;
+    align-self: flex-start;
+    border-radius: 7.5px;
+    max-width: 60%;
+    position: relative;
+}
+
+
+.message-bubble-content {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+.message-content {
+    color: #ffffff;
+    margin: 0;
+}
+.message-time {
+    margin-top: 10px;
+    color: #cccccca0;
+    font-size: 12px;
+    align-self: flex-end;
+}
