@@ -67,7 +67,8 @@
     flex-direction: column;
     height: calc(100vh - 60px);
     overflow-y: auto;
-    scrollbar-color: var(--detail-color-primary) transparent;
+    scrollbar-color: rgba(98, 97, 97, 0.463) transparent;
+    scrollbar-width: thin;
     padding: 10px;
 }
 .messages-list-container {
@@ -86,4 +87,18 @@
     .contact-detail-screen-container {
         display: none;
     }
+}
+
+/* Custom Scrollbar for Webkit browsers */
+.contact-messages-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contact-messages-container::-webkit-scrollbar-thumb {
+    background-color: rgba(98, 97, 97, 0.463);
+    border-radius: 3px;
+}
+
+.contact-messages-container::-webkit-scrollbar-track {
+    background: transparent;
 }

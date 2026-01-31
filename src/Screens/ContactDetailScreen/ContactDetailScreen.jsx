@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { useParams } from 'react-router';
 import { getContactById } from '../../Services/ContactService';
 import MessageContent from '../../Components/MessageContent/MessageContent';
@@ -13,6 +13,13 @@ export default function ContactDetailScreen() {
     const {contactSelected} = useContext(ContactDetailContext);
     const {updateContactById} = useContext(ContactContext);
 
+    const messagesEndRef = useRef(null)
+
+    useEffect(() => {
+        if(messagesEndRef.current) {
+            messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
+        }
+    }, [contactSelected?.messages])
     
     if (!contactSelected) {
         return (
@@ -35,6 +42,7 @@ export default function ContactDetailScreen() {
                             <MessageContent 
                                 messages_list={contactSelected.messages} 
                                 contact_selected={contactSelected}/>
+                            <div ref={messagesEndRef} />
                     </div>
                 )}
             </div>

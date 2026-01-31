@@ -17,11 +17,17 @@ function NewMessageForm() {
     }
 
     const [formState, setFormState] = React.useState(initialMessage)
+    const textareaRef = React.useRef(null)
 
     
     function onUpdateImput(event) {
         const fieldName = event.target.name 
         const fieldValue = event.target.value 
+        
+        event.target.style.height = 'inherit'; 
+        
+        event.target.style.height = `${event.target.scrollHeight}px`; 
+        
         setFormState(
             (currentFormState) => {
                 return {
@@ -42,10 +48,24 @@ function NewMessageForm() {
         addNewMessage(formState[FIELD_NAMES.NEW_MESSAGE])
 
         setFormState(initialMessage);
+        if(textareaRef.current){
+            textareaRef.current.style.height = ''
+        }
+    }
+
+    function handleKeyDown(event) {
+        // Si se presiona Enter y NO se está presionando Shift
+        if (event.key === 'Enter' && !event.shiftKey) {
+            // Evitamos el salto de línea por defecto
+            event.preventDefault();
+            // Enviamos el mensaje
+            sendMessage(event);
+        }
+        // Si se presiona Shift + Enter, el salto de línea ocurre automáticamente por defecto.
     }
 
     return (
-        <form onSubmit={sendMessage} className='new-message-form'>
+        <div  className='new-message-bar'>
             <div className='icon-form-container'>
                 <button>
                     <svg 
@@ -58,22 +78,26 @@ function NewMessageForm() {
                     </svg>
                 </button>
             </div>
-            <div className='textarea-container'>
-                <textarea 
-                    name={FIELD_NAMES.NEW_MESSAGE} 
-                    placeholder='type a message'
-                    onChange={onUpdateImput} 
-                    value={formState[FIELD_NAMES.NEW_MESSAGE]}
-                ></textarea>
-            </div>
-            <div className='send-button-container'>
-                <button>
-                    <svg 
-                    viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" fill="none"><title>wds-ic-send-filled</title><path d="M5.4 19.425C5.06667 19.5583 4.75 19.5291 4.45 19.3375C4.15 19.1458 4 18.8666 4 18.5V14L12 12L4 9.99997V5.49997C4 5.1333 4.15 4.85414 4.45 4.66247C4.75 4.4708 5.06667 4.44164 5.4 4.57497L20.8 11.075C21.2167 11.2583 21.425 11.5666 21.425 12C21.425 12.4333 21.2167 12.7416 20.8 12.925L5.4 19.425Z" fill="currentColor"></path>
-                    </svg>
-                </button>
-            </div>
-        </form>
+            <form onSubmit={sendMessage} className='new-message-form'>
+                <div className='textarea-container'>
+                    <textarea 
+                        ref={textareaRef}
+                        name={FIELD_NAMES.NEW_MESSAGE} 
+                        placeholder='Type a message'
+                        onChange={onUpdateImput} 
+                        onKeyDown={handleKeyDown}
+                        value={formState[FIELD_NAMES.NEW_MESSAGE]}
+                    ></textarea>
+                </div>
+                <div className='send-button-container'>
+                    <button>
+                        <svg 
+                        viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" fill="none"><title>wds-ic-send-filled</title><path d="M5.4 19.425C5.06667 19.5583 4.75 19.5291 4.45 19.3375C4.15 19.1458 4 18.8666 4 18.5V14L12 12L4 9.99997V5.49997C4 5.1333 4.15 4.85414 4.45 4.66247C4.75 4.4708 5.06667 4.44164 5.4 4.57497L20.8 11.075C21.2167 11.2583 21.425 11.5666 21.425 12C21.425 12.4333 21.2167 12.7416 20.8 12.925L5.4 19.425Z" fill="currentColor"></path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
     )       
 
 }
