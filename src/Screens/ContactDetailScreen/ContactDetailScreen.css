@@ -142,13 +142,12 @@
 .messages-list-container {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 0px;
     min-height: 0;
-    flex-grow: 1;
     overflow-y: auto;
 }
 .new-message-form-container {
-    padding: 2px 5px 5px 5px;
+    padding: 2px 5px 0px 5px;
     background: none;
 }
 
