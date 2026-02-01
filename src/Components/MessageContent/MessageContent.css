@@ -43,6 +43,7 @@
     margin: 0px;
     word-wrap: break-word;
     word-break: break-word; 
+    white-space: pre-wrap;
 }
 .message-time {
     width: fit-content;
