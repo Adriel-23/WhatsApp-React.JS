@@ -62,28 +62,28 @@ const contacts_data = [
         messages: [
             {
                 message_id: 1,
-                message_content: 'Flaquito, sale CS2 yayayaya???',
+                message_content: 'LUFFY, DONDE ESTA TODA LA CARNE DEL REFRIGERADOR?',
                 message_created_at: new Date('2026-01-22T17:00:00'),
                 message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 2,
-                message_content: 'Me preparo comida y entro, anda metiendote a DS',
+                message_content: 'No lo sé, quizá Chopper se la comió',
                 message_created_at: new Date('2026-01-22T17:05:00'),
                 message_status: 'SEEN', 
                 send_by_me: true,
             },
             {
                 message_id: 3,
-                message_content: 'Dale te espero, invitemos al Pato tambien',
+                message_content: 'Chopper no es tan glotón como tú, VE A PESCAR ALGO YA. O no tendremos que comer hoy',
                 message_created_at: new Date('2026-01-22T17:10:00'),
                 message_status: 'SEEN', 
                 send_by_me: false,
             },
             {
                 message_id: 4,
-                message_content: 'Dale, dame 10 minutos y estoy',
+                message_content: 'Sanjiiii. Está bien, traeré un pez muuy grande',
                 message_created_at: new Date('2026-01-22T17:15:00'),
                 message_status: 'SEEN', 
                 send_by_me: true,
@@ -131,7 +131,7 @@ const contacts_data = [
             },
             {
                 message_id: 5,
-                message_content: 'No exageres, pronto llegaremos a Alabasta',
+                message_content: 'No exageres. Además es tu culpa por comerte toda la carne del refrigerador, vete a pescar',
                 message_created_at: new Date('2026-01-23T10:20:00'),
                 message_status: 'SEEN', 
                 send_by_me: false,
