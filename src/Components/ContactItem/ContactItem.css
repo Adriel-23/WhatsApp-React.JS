@@ -15,7 +15,7 @@ img {
 .contact-item-link {
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
 }
 .contact-item-container {
     background-color: var(--background-color-dark-mode-primary);
