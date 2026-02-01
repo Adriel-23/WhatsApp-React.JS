@@ -60,16 +60,25 @@ img {
     border-radius: 15px;
     box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.1);
 }
+.contact-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.contact-item-header span.time {
+    font-size: 10px;
+    color: var(--font-color-secondary);
+    font-weight: 400;
+}
 
 @media screen and (max-width: 768px) {
     
     .contact-item-container {
         display: flex;
         padding: 5px;
-        /* border: 1px solid #000000; */
     }
     .contact-item-info {
-        /* border: 1px solid #c42727; */
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -86,4 +95,39 @@ img {
         height: 40px;
     }
 
+}
+@media screen and (max-width: 480px) {
+    
+    .contact-item-container {
+        gap: 12px;
+        min-height: 72px;
+    }
+
+    .contact-item-container img {
+        width: 35px; 
+        height: 35px;
+        min-width: 35px;
+    }
+
+
+    .contact-item-info h3 {
+        margin-bottom: 2px;
+    }
+
+    .message-received {
+        margin-top: 0px;
+        gap: 3px;
+    }
+
+    .message-received svg {
+        width: 15px; 
+        height: 15px;
+        min-width: 15px;
+    }
+
+    .message-received p {
+        font-size: 12px;
+        color: var(--font-color-dark-mode-secondary);
+        line-height: 1.2;
+    }
 }

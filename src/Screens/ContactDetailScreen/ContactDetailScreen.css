@@ -13,6 +13,7 @@
 
     --background-color-dark-mode-primary: #161717;
     --background-color-dark-mode-secondary: #2e2f2f;
+    --background-color-dark-mode-tertiary: #030607;
     --font-color-dark-mode-primary: #ffffff;
     --font-color-dark-mode-secondary: #a2a295;
 }
@@ -20,9 +21,10 @@
     display: flex;
     flex-direction: column;
     background-color: var(--background-color-dark-mode-primary);
-    color: #ffffff;
+    color: var(--font-color-dark-mode-primary);
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 .contact-detail-screen {
     display: flex;
@@ -35,9 +37,7 @@
     font-family: var(--font-family-primary);
     height: 100vh;
     width: 100%;
-    /* border: 3px solid #000000; */
     flex-direction: column;
-    justify-content: space-between;
     position: relative;
     background-color: var(--background-color-dark-mode-primary);
     z-index: 1;
@@ -58,47 +58,110 @@
 .profile-contact-detail-header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    gap: 15px;
-    background-color: var(--background-color-dark-mode-primary);
+    justify-content: space-between;
+    padding: 10px 5px;
+    gap: 10px;
+    background-color: var(--background-color-dark-mode-tertiary);
+    color: var(--font-color-dark-mode-primary);
+    min-height: 40px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.profile-contact-detail-header h1 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.2;
+}
+.header-left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
 .contact-messages-container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 60px);
+    flex: 1;
+    height: auto;
     overflow-y: auto;
     scrollbar-color: rgba(98, 97, 97, 0.463) transparent;
     scrollbar-width: thin;
-    padding: 10px;
+    padding: 2px 0px;
+}
+.header-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.contact-text-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-status {
+    font-size: 12px;
+    color: var(--font-color-dark-mode-secondary);
+    margin: 0;
+}
+.header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+.header-actions button {
+    background: none;
+    border: none;
+    color: var(--font-color-dark-mode-primary);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.profile-contact-detail-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.back-button {
+    display: none; 
+    background: none;
+    border: none;
+    color: var(--font-color-dark-mode-primary);
+    cursor: pointer;
+    margin-right: 0px;
+}
+.back-button svg {
+    width: 24px;
+    height: 24px;
 }
 .messages-list-container {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    min-height: 0;
+    flex-grow: 1;
     overflow-y: auto;
 }
 .new-message-form-container {
-    padding: 10px;
+    padding: 2px 5px 5px 5px;
     background: none;
-    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 769px) {
     .contact-detail-screen-container {
         display: none;
     }
+    .back-button {
+        display: flex;
+    }
+    .profile-contact-detail-header {
+        border-left: none;
+    }
+    
 }
 
-/* Custom Scrollbar for Webkit browsers */
-.contact-messages-container::-webkit-scrollbar {
-    width: 6px;
-}
-
-.contact-messages-container::-webkit-scrollbar-thumb {
-    background-color: rgba(98, 97, 97, 0.463);
-    border-radius: 3px;
-}
-
-.contact-messages-container::-webkit-scrollbar-track {
-    background: transparent;
-}

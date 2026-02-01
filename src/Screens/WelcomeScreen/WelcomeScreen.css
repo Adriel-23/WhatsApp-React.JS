@@ -107,3 +107,22 @@
     background: none;
     box-shadow: none;
 }
+
+
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+    .promo-card {
+        max-width: 320px;
+        padding: 25px 30px;
+    }
+    .promo-title {
+        font-size: 18px;
+    }
+    .promo-text {
+        font-size: 13px;
+    }
+    .download-btn {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    
+}

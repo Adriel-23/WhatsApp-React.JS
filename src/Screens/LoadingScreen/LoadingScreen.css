@@ -20,14 +20,17 @@
     text-align: center;
     width: 100%;
     gap: 20px;
+    padding: 0 20px;
 }
 
 .whatsapp-logo {
     color: #454545;
 }
+
 .whatsapp-logo svg {
     width: 64px;
     height: 64px;
+    transition: all 0.3s ease; 
 }
 
 .progress-bar-container {
@@ -66,4 +69,59 @@
     align-items: center;
     gap: 8px;
     font-weight: 400;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 769px) {
+    .loading-content {
+        gap: 15px; 
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .whatsapp-logo svg {
+        width: 50px; 
+        height: 50px;
+    }
+    
+    .loading-text {
+        font-size: 16px;
+    }
+
+    .progress-bar-container {
+        width: 60%; 
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .loading-content {
+        gap: 12px;
+    }
+
+    .whatsapp-logo svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .progress-bar-container {
+        width: 70%; 
+    }
+
+    .loading-text {
+        font-size: 15px;
+    }
+
+    .encrypted-text {
+        font-size: 11px;
+        position: absolute; 
+        bottom: 30px;
+    }
+    
+    .loading-screen {
+        position: relative; 
+    }
 }
