@@ -46,6 +46,7 @@ body {
     flex: 1;
     height: 100vh;
     width: 50%;
+    min-width: 500px;
 }
 .contact-side-bar {
     flex: 1;
@@ -178,6 +179,33 @@ body {
     display: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .contacts-container{
+        width: 100%;
+        min-width: 380px;
+        flex: 1;
+        height: 100vh;
+    }
+
+    .contact-side-bar{
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        border: none;
+        overflow: hidden;
+    }
+
+    .contact-detail-screen{
+        display: flex;
+        width: 100%;
+        border: none;
+    }
+
+    .home-screen-body{
+        justify-content: center;
+    }
+    
+}
 
 @media screen and (max-width: 769px) {
     

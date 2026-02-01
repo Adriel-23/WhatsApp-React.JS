@@ -17,5 +17,8 @@ Decidi seguir el proyecto de WhatsApp y tratar de hacerlo lo mas semejante posib
         Para hacer el cambio de pantallas en el tamaño 'mobile' debí aprender a usar 'useLocation'(que no es dificil) y crear una const que me indique si nos encontrabamos en la ubicacion de '/contact/'. A raíz de eso añadir o no una clase de 'hidden-on-mobile' usando un condicional (?/:)
 
 En sí eso fue lo que mas recuerdo haber 'rabeado' en el desarrollo del proyecto. 
-Espero que todo esté bien, un saludo.
+
+    Hay un contacto oculto como mencioné, en la barra busque 'Sogeking' o solo las primeras letras y sale como 'new chat'. al enviar mensaje el contacto ya queda en la lista.
+
+Espero que todo esté bien, y le guste mi propyecto. Un saludo.
 
