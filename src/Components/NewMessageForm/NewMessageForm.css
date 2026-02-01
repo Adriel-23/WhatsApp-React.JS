@@ -1,22 +1,21 @@
 .new-message-bar {
     display: flex;
     flex-direction: row;
-    /* align-items: flex-end mantiene los botones abajo cuando la barra crece hacia arriba */
     align-items: flex-end; 
     background: var(--background-color-dark-mode-secondary);
-    border-radius: 24px; /* Un radio un poco menor se ve más moderno */
-    padding: 5px 10px; /* Padding interno general de la barra */
-    min-height: 50px; /* Altura mínima de toda la barra */
+    border-radius: 24px; 
+    padding: 5px 10px; 
+    min-height: 50px; 
 }
-/* --- LADO IZQUIERDO (Iconos) --- */
+
 .icon-form-container {
     display: flex;
-    align-items: center; /* Centrado vertical de iconos respecto a sí mismos */
+    align-items: center; 
     justify-content: center;
     gap: 10px;
-    padding-bottom: 8px; /* Ajuste fino para alinearlos con el input */
+    padding-bottom: 8px; 
     padding: 10px;
-    flex-shrink: 0; /* Evita que se aplasten */
+    flex-shrink: 0; 
 }
 
 .icon-form-container button {
@@ -30,57 +29,48 @@
     padding: 0;
 }
 
-/* --- BLOQUE CENTRAL Y DERECHO (Formulario) --- */
 .new-message-form {
     display: flex;
-    flex: 1; /* MAGIA: Ocupa todo el espacio restante disponible */
-    align-items: flex-end; /* Alinea botón enviar abajo */
+    flex: 1; 
+    align-items: flex-end;
     gap: 10px;
 }
 
-/* Contenedor del textarea */
 .textarea-container {
-    flex: 1; /* Ocupa todo el espacio disponible dentro del form */
+    flex: 1;
     display: flex;
     align-items: center;
 }
 
 .textarea-container textarea {
     width: 100%;
-    /* Altura inicial fija */
     height: 40px; 
-    /* Límite máximo antes de scroll */
+    min-height: 40px;
     max-height: 120px;
-    
     background: none;
     border: none;
     resize: none;
     outline: none;
-    
     color: var(--font-color-dark-mode-primary);
-    font-size: 15px; /* Un poco más grande para mejor lectura */
+    font-size: 15px;
     line-height: 20px;
-    
-    /* CENTRADO DEL TEXTO: */
-    /* (40px altura total - 20px linea de texto) / 2 = 10px padding */
     padding-top: 10px; 
     padding-bottom: 10px; 
-    
-    box-sizing: border-box; /* Asegura que el padding no sume al width */
-    overflow-y: auto; /* Scroll automático si pasa max-height */
-    scrollbar-width: none; /* Ocultar scrollbar en Firefox */
+    box-sizing: border-box; 
+    overflow-y: auto; 
+    scrollbar-width: none; 
 }
-/* Ocultar scrollbar en Chrome/Safari */
+
 .textarea-container textarea::-webkit-scrollbar {
     display: none;
 }
 
-/* --- LADO DERECHO (Botón Enviar) --- */
+
 .send-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 5px; /* Ajuste para alinear con los iconos */
+    padding-bottom: 5px; 
 }
 
 .send-button-container button {
@@ -102,6 +92,6 @@
     width: 20px;
     height: 20px;
     color: #000;
-    margin-left: 3px; /* Corrección óptica visual para el icono de "avión" */
+    margin-left: 3px;
 }
 

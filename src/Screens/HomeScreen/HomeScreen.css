@@ -39,25 +39,26 @@ body {
     display: flex;
     font-family: var(--font-family-primary);
     width: 100%;
-    
 }
 .contacts-container {
     display: flex;
     flex-direction: row;
     flex: 1;
     height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
     width: 50%;
 }
 .contact-side-bar {
     flex: 1;
-    height: 100vh;
+    height: 100%;
     border-right: 1px solid var(--background-color-dark-mode-secondary);
     display: flex;
     flex-direction: column;
     overflow: hidden;
     min-width: 320px;
-    max-width: 580px;
     padding: 10px 10px;
+    position: relative;
 }
 .contact-detail-screen {
     border-right: 1px solid var(--background-color-dark-mode-secondary);
@@ -174,13 +175,18 @@ body {
     background-color: var(--background-color-dark-mode-secondary);
     color: var(--font-color-dark-mode-primary);
 }
+.mobile-bottom-nav {
+    display: none;
+}
 
-/* REGLAS PARA MOVILES Y TABLETS PEQUEÑAS (Habilitan vista de una sola columna) */
+
 @media screen and (max-width: 769px) {
     
+
     .contacts-container{
         width: 100%;
         flex: 1;
+        height: 100vh;
     }
 
     .contact-side-bar{
@@ -188,6 +194,7 @@ body {
         min-width: 0;
         max-width: none;
         border: none;
+        overflow: hidden;
     }
 
     .contact-detail-screen{

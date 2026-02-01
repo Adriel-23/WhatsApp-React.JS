@@ -24,7 +24,7 @@ function NewMessageForm() {
         const fieldName = event.target.name 
         const fieldValue = event.target.value 
         
-        event.target.style.height = 'inherit'; 
+        event.target.style.height = 'auto'; 
         
         event.target.style.height = `${event.target.scrollHeight}px`; 
         
@@ -40,11 +40,11 @@ function NewMessageForm() {
 
 
     const {addNewMessage, contactSelected} = useContext(ContactDetailContext);
-    /* console.log('Contacto en NewMessageForm', contactSelected); */
+    
 
     function sendMessage(event) {
         event.preventDefault();
-        /* console.log('Enviando mensaje:', formState) */
+        
         addNewMessage(formState[FIELD_NAMES.NEW_MESSAGE])
 
         setFormState(initialMessage);
@@ -54,14 +54,13 @@ function NewMessageForm() {
     }
 
     function handleKeyDown(event) {
-        // Si se presiona Enter y NO se está presionando Shift
+        
         if (event.key === 'Enter' && !event.shiftKey) {
-            // Evitamos el salto de línea por defecto
+            
             event.preventDefault();
-            // Enviamos el mensaje
+            
             sendMessage(event);
         }
-        // Si se presiona Shift + Enter, el salto de línea ocurre automáticamente por defecto.
     }
 
     return (
@@ -81,6 +80,7 @@ function NewMessageForm() {
             <form onSubmit={sendMessage} className='new-message-form'>
                 <div className='textarea-container'>
                     <textarea 
+                        rows={1}
                         ref={textareaRef}
                         name={FIELD_NAMES.NEW_MESSAGE} 
                         placeholder='Type a message'
