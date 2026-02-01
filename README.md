@@ -20,5 +20,9 @@ En sí eso fue lo que mas recuerdo haber 'rabeado' en el desarrollo del proyecto
 
     Hay un contacto oculto como mencioné, en la barra busque 'Sogeking' o solo las primeras letras y sale como 'new chat'. al enviar mensaje el contacto ya queda en la lista.
 
+    Tambíen agregué la función de poder enviar los mensajes con 'Enter' sin tener que apretar el boton de enviar con el mouse.
+
+    Y por último hice que se respete el salto de linea al enviar un mensaje que lo contenga, ya que por defecto no respetaba el salto de linea si uno lo hacia a drede, ahora si.
+
 Espero que todo esté bien, y le guste mi propyecto. Un saludo.
 
