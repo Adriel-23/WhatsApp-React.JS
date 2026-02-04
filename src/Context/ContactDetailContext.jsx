@@ -34,7 +34,6 @@ export default function ContactDetailContextProvider (){
                 message_status: 'UNSEEN',
                 send_by_me: true,
             }
-            /* console.log('Nuevo mensaje a agregar', new_message); */
             updateContactById(
                 {messages: [...contactSelected.messages, new_message],
                     last_message: new_message

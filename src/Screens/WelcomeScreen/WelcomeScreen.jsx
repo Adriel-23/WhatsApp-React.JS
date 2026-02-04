@@ -8,7 +8,6 @@ export default function WelcomeScreen() {
             
             <div className="promo-card">
                 <div className="promo-image-container">
-                     {/* Espacio para el SVG de la Laptop */}
                     <div className="placeholder-svg">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">

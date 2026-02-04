@@ -64,11 +64,6 @@ export default function ContactContextProvider() {
         },
         []
     )
-    /* console.log(
-        'Cargando', loadingContacts,
-        'Contact list', contacts
-    ) */
-
     const providerValue = {
         contacts,
         loadingContacts,

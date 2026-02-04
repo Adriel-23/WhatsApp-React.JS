@@ -12,7 +12,7 @@
 .welcome-screen {
     width: 100%;
     height: 100%;
-    background-color: var(--background-color-primary); /* Fondo general muy oscuro */
+    background-color: var(--background-color-primary); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
     font-family: var(--font-family-primary);
 }
 
-/* --- Tarjeta Central --- */
+
 .promo-card {
     background-color: var(--background-color-secondary);
     padding: 30px 35px;
@@ -40,8 +40,6 @@
     margin-bottom: 20px;
 }
 .placeholder-svg {
-    width: 130px;
-    height: 130px;
     margin-bottom: 20px;
 }
 .placeholder-svg svg {
@@ -80,7 +78,7 @@
     background-color: var(--button-hover-background-color);
 }
 
-/* --- Botones Inferiores --- */
+
 .quick-actions-container {
     display: flex;
     gap: 32px;
@@ -123,6 +121,10 @@
     .download-btn {
         padding: 8px 20px;
         font-size: 13px;
+    }
+    .placeholder-svg {
+        width: 110px;
+        height: 110px;
     }
     
 }
